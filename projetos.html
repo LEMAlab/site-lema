@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos — [Nome da Consultoria]</title>
+  <meta name="description" content="[Projetos e estudos de caso da consultoria.]" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo" aria-label="[Nome da Consultoria] — início">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">[Nome]</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#processo">Como trabalhamos</a></li>
+        <li><a href="index.html#equipe">Equipe</a></li>
+        <li><a href="projetos.html" class="active">Projetos</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contato" class="nav-cta">Falar com a gente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="projetos-header" style="border-top:none;">
+      <div class="container">
+        <span class="eyebrow">Projetos</span>
+        <h1>[Um retrato do nosso trabalho]</h1>
+        <p class="lede" style="max-width:60ch;">[1-2 frases sobre os tipos de projeto abaixo. Estão agrupados por período — clique em cada bloco para expandir.]</p>
+      </div>
+    </section>
+
+    <section style="border-top:none;padding-top:0;">
+      <div class="container">
+
+        <!-- Cada bloco vira colapsável automaticamente via main.js (classe .semester-block).
+             Duplique um .semester-block para cada período e um .project-entry para cada projeto. -->
+        <div class="semester-block">
+          <div class="semester-heading">[2026 — 1º Semestre]</div>
+          <div class="project-entry">
+            <span class="project-tag">[Setor / área]</span>
+            <h4>[Nome do projeto ou cliente]</h4>
+            <p>[1-2 frases: o problema, o que foi feito e o resultado. Evite dados confidenciais sem autorização.]</p>
+          </div>
+          <div class="project-entry">
+            <span class="project-tag">[Setor / área]</span>
+            <h4>[Nome do projeto ou cliente]</h4>
+            <p>[1-2 frases sobre o projeto.]</p>
+          </div>
+        </div>
+
+        <div class="semester-block">
+          <div class="semester-heading">[2025 — 2º Semestre]</div>
+          <div class="project-entry">
+            <span class="project-tag">[Setor / área]</span>
+            <h4>[Nome do projeto ou cliente]</h4>
+            <p>[1-2 frases sobre o projeto.]</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="ano"></span> [Nome da Consultoria] · Todos os direitos reservados</span>
+      <span><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a> · [Cidade, Estado]</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

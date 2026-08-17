@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Nome da Consultoria] — [seu slogan em poucas palavras]</title>
+  <meta name="description" content="[Descreva em 1-2 frases o que sua consultoria faz e para quem.]" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav-logo" aria-label="[Nome da Consultoria] — início">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">[Nome]</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Como trabalhamos</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato" class="nav-cta">Falar com a gente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Banner opcional — ative com DISPONIBILIDADE_ABERTA = true em main.js -->
+    <div class="inscricao-banner" id="inscricao-banner" role="status" hidden>
+      <div class="container inscricao-inner">
+        <div class="inscricao-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <div class="inscricao-text">
+          <strong>[Aviso curto — ex: Agenda aberta para novos projetos no Q3]</strong>
+          <span> [complemento opcional, ex: até 30/09.]</span>
+        </div>
+        <a href="#contato" class="btn btn-sm inscricao-cta">[Chamada para ação]</a>
+        <button class="inscricao-close" id="inscricao-close" aria-label="Fechar aviso">✕</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" style="border-top:none;">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">[Categoria do serviço — ex: Consultoria em Dados]</span>
+          <h1>[Frase de efeito que resume o que você resolve para o cliente]</h1>
+          <p class="hero-lede">[1-2 frases explicando, em linguagem simples, o problema que você resolve e para quem. Fale do resultado, não do processo.]</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">Solicitar uma conversa</a>
+            <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+          </div>
+        </div>
+
+        <!-- Elemento-assinatura: placa de credenciais -->
+        <aside class="credential reveal" aria-label="Credenciais">
+          <span class="credential-seal" aria-hidden="true">EST.<br>[ANO]</span>
+          <p class="credential-kicker">Consultoria · [Cidade]</p>
+          <p class="credential-name">[Nome da Consultoria]</p>
+          <p class="credential-tag">[Uma linha de posicionamento — ex: estratégia orientada por dados.]</p>
+          <div class="credential-row">
+            <span class="credential-label">Projetos entregues</span>
+            <span class="credential-value" data-count="40" data-suffix="+">0</span>
+          </div>
+          <div class="credential-row">
+            <span class="credential-label">Anos de atuação</span>
+            <span class="credential-value" data-count="5">0</span>
+          </div>
+          <div class="credential-row">
+            <span class="credential-label">Setores atendidos</span>
+            <span class="credential-value" data-count="8">0</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FAIXA DE CREDIBILIDADE -->
+    <div class="trust">
+      <div class="container trust-inner">
+        <span class="trust-label">Confiam no nosso trabalho</span>
+        <div class="trust-items">
+          <span class="trust-item">[Cliente / Setor 1]</span>
+          <span class="trust-item">[Cliente / Setor 2]</span>
+          <span class="trust-item">[Cliente / Setor 3]</span>
+          <span class="trust-item">[Cliente / Setor 4]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="container sobre-grid">
+        <div class="reveal">
+          <span class="eyebrow">Sobre</span>
+          <h2>[Título curto sobre quem vocês são]</h2>
+        </div>
+        <div class="reveal">
+          <p class="lede">[Parágrafo de abertura: origem, missão e o que torna sua abordagem diferente. Uma frase forte.]</p>
+          <p>[Parágrafo 2: para que tipo de cliente vocês trabalham melhor — porte, setor, tipo de problema.]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Serviços</span>
+          <h2>[O que oferecemos]</h2>
+          <p>[Uma frase enquadrando as frentes de trabalho abaixo.]</p>
+        </div>
+        <div class="grid-3 reveal">
+          <div class="card">
+            <span class="card-num">i</span>
+            <h3>[Serviço 1]</h3>
+            <p>[Descrição em 1-2 frases: o que está incluso e para quem serve.]</p>
+          </div>
+          <div class="card">
+            <span class="card-num">ii</span>
+            <h3>[Serviço 2]</h3>
+            <p>[Descrição em 1-2 frases.]</p>
+          </div>
+          <div class="card">
+            <span class="card-num">iii</span>
+            <h3>[Serviço 3]</h3>
+            <p>[Descrição em 1-2 frases.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2>[Da conversa inicial à entrega]</h2>
+        </div>
+        <ol class="process-list reveal">
+          <li class="process-item">
+            <span class="process-num">01</span>
+            <div><h3>[Etapa 1 — ex: Diagnóstico]</h3><p>[O que acontece nessa etapa e o que o cliente recebe ao final.]</p></div>
+          </li>
+          <li class="process-item">
+            <span class="process-num">02</span>
+            <div><h3>[Etapa 2 — ex: Proposta]</h3><p>[O que acontece nessa etapa.]</p></div>
+          </li>
+          <li class="process-item">
+            <span class="process-num">03</span>
+            <div><h3>[Etapa 3 — ex: Execução]</h3><p>[O que acontece nessa etapa.]</p></div>
+          </li>
+          <li class="process-item">
+            <span class="process-num">04</span>
+            <div><h3>[Etapa 4 — ex: Entrega e acompanhamento]</h3><p>[O que acontece nessa etapa.]</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTO -->
+    <section class="quote-section">
+      <div class="container">
+        <span class="eyebrow">Depoimento</span>
+        <div class="quote-block">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <blockquote class="quote-text">[Uma frase de um cliente satisfeito. Curta, específica, sobre um resultado real.]</blockquote>
+          <div class="quote-cite">
+            <span class="quote-name">[Nome do cliente]</span>
+            <span class="quote-role">[Cargo · Empresa]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Equipe</span>
+          <h2>[Quem vai trabalhar com você]</h2>
+          <p>[Opcional: uma frase sobre a senioridade ou a formação do time.]</p>
+        </div>
+        <div class="grid-team reveal">
+          <!-- Troque a <div class="avatar"> por <img class="avatar" src="imagens/foto.jpg" alt="[Nome]"> quando tiver a foto. -->
+          <div class="team-card">
+            <div class="avatar" aria-hidden="true">[in]</div>
+            <h3>[Nome Sobrenome]</h3>
+            <span class="team-role">[Cargo / especialidade]</span>
+          </div>
+          <div class="team-card">
+            <div class="avatar" aria-hidden="true">[in]</div>
+            <h3>[Nome Sobrenome]</h3>
+            <span class="team-role">[Cargo / especialidade]</span>
+          </div>
+          <div class="team-card">
+            <div class="avatar" aria-hidden="true">[in]</div>
+            <h3>[Nome Sobrenome]</h3>
+            <span class="team-role">[Cargo / especialidade]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>[Perguntas frequentes]</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>[Pergunta 1 — ex: Como funciona o orçamento?]</summary>
+            <p>[Resposta objetiva.]</p>
+          </details>
+          <details class="faq-item">
+            <summary>[Pergunta 2 — ex: Quanto tempo leva um projeto?]</summary>
+            <p>[Resposta objetiva.]</p>
+          </details>
+          <details class="faq-item">
+            <summary>[Pergunta 3 — ex: Vocês atendem remoto?]</summary>
+            <p>[Resposta objetiva.]</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+      <div class="container contato-grid">
+        <div class="reveal">
+          <span class="eyebrow">Contato</span>
+          <h2>[Chamada final para ação]</h2>
+          <p>[Explique o próximo passo: preencher um formulário, agendar uma call ou mandar um e-mail.]</p>
+          <div class="contato-actions">
+            <!-- Troque pelo link do seu formulário (Google Forms, Typeform) ou mailto: -->
+            <a href="mailto:seuemail@exemplo.com" class="btn btn-primary">Enviar um e-mail</a>
+            <a href="#" class="btn btn-outline">Agendar uma conversa</a>
+          </div>
+        </div>
+        <dl class="contato-detail reveal">
+          <dt>E-mail</dt>
+          <dd><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></dd>
+          <dt>Telefone</dt>
+          <dd>[+55 (00) 00000-0000]</dd>
+          <dt>Localização</dt>
+          <dd>[Cidade, Estado]</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="ano"></span> [Nome da Consultoria] · Todos os direitos reservados</span>
+      <span><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a> · [Cidade, Estado]</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
