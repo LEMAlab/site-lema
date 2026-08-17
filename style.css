@@ -343,3 +343,33 @@ footer.site-footer { background: var(--ink-soft); color: #9297A0; padding: 32px 
 .project-tag { font-family: var(--font-mono); font-size: .7rem; color: var(--green-deep); text-transform: uppercase; letter-spacing: .08em; }
 .project-entry h4 { margin: 8px 0 6px; font-size: 1.12rem; font-family: var(--font-display); }
 .project-entry p:last-child { margin-bottom: 0; }
+
+/* ── Desafios (dores do cliente) ─────────────────────────── */
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.challenge {
+  background: var(--paper-2); border: 1px solid var(--line); border-top: 2px solid var(--green);
+  border-radius: var(--radius); padding: 28px 24px;
+}
+.challenge-kicker {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green); display: block; margin-bottom: 14px;
+}
+.challenge h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.challenge p:last-child { margin-bottom: 0; font-size: .95rem; }
+@media (max-width: 900px) { .grid-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid-4 { grid-template-columns: 1fr; } }
+
+/* Ícone de linha nos cards de serviço */
+.card-icon { color: var(--green); margin-bottom: 18px; display: block; }
+.card-icon svg { width: 34px; height: 34px; display: block; }
+
+/* Bloco de resultado nos cases (projetos.html) */
+.project-result {
+  margin-top: 14px; padding: 14px 18px; background: rgba(46, 134, 76, .06);
+  border-left: 2px solid var(--green); border-radius: 0 var(--radius) var(--radius) 0;
+}
+.result-label {
+  font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green-deep); display: block; margin-bottom: 4px;
+}
+.project-result p { margin: 0; color: var(--ink); font-size: .95rem; }
