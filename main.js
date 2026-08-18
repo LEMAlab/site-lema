@@ -98,5 +98,19 @@ document.querySelectorAll('.semester-block').forEach(block => {
   });
 });
 
+// ── Rodízio dos ícones estatísticos no hero ─────────────────────────────────
+const glyphs = document.querySelectorAll('.hero-glyphs .glyph');
+if (glyphs.length > 1) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    let gi = 0;
+    setInterval(() => {
+      glyphs[gi].classList.remove('is-active');
+      gi = (gi + 1) % glyphs.length;
+      glyphs[gi].classList.add('is-active');
+    }, 2500);
+  }
+}
+
 // ── Ano automático no rodapé ────────────────────────────────────────────────
 document.querySelectorAll('#ano').forEach(el => { el.textContent = new Date().getFullYear(); });
