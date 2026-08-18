@@ -1,100 +1,116 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos — [Nome da Consultoria]</title>
-  <meta name="description" content="[Projetos e estudos de caso da consultoria.]" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+// ── Banner de disponibilidade ──────────────────────────────────────────────
+const DISPONIBILIDADE_ABERTA = false;
+const banner = document.getElementById('inscricao-banner');
+if (banner && DISPONIBILIDADE_ABERTA) {
+  banner.removeAttribute('hidden');
+  const closeBtn = document.getElementById('inscricao-close');
+  if (closeBtn) closeBtn.addEventListener('click', () => banner.setAttribute('hidden', ''));
+}
 
-  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+// ── Logo → volta ao topo (quando aponta para #top) ──────────────────────────
+document.querySelectorAll('.nav-logo').forEach(logo => {
+  if (logo.getAttribute('href') === '#top') {
+    logo.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+});
 
-  <div class="mobile-bar">
-    <a href="index.html" class="nav-logo"><span class="logo-mark" aria-hidden="true"></span><span class="logo-text">[Nome]</span></a>
-    <button class="sb-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-  <div class="sb-backdrop" hidden></div>
+// ── Menu lateral (mobile) ───────────────────────────────────────────────────
+const sidebar  = document.querySelector('.sidebar');
+const sbToggle = document.querySelector('.sb-toggle');
+const backdrop = document.querySelector('.sb-backdrop');
 
-  <aside class="sidebar">
-    <div class="sb-head">
-      <a href="index.html" class="nav-logo" aria-label="[Nome da Consultoria] — início">
-        <span class="logo-mark" aria-hidden="true"></span>
-        <span class="logo-text">[Nome]</span>
-      </a>
-    </div>
-    <nav class="sb-nav" aria-label="Navegação principal">
-      <a href="index.html#sobre"><span class="sb-idx">01</span> Sobre</a>
-      <a href="index.html#servicos"><span class="sb-idx">02</span> Serviços</a>
-      <a href="index.html#desafios"><span class="sb-idx">03</span> Desafios</a>
-      <a href="index.html#processo"><span class="sb-idx">04</span> Como trabalhamos</a>
-      <a href="index.html#equipe"><span class="sb-idx">05</span> Equipe</a>
-      <a href="projetos.html" class="active"><span class="sb-idx">06</span> Projetos</a>
-      <a href="index.html#faq"><span class="sb-idx">07</span> FAQ</a>
-    </nav>
-    <div class="sb-foot">
-      <span class="sb-status"><span class="dot" aria-hidden="true"></span> [disponível para novos projetos]</span>
-      <a href="index.html#contato" class="btn btn-primary btn-sm sb-cta">Falar com a gente</a>
-      <a href="mailto:seuemail@exemplo.com" class="sb-email">seuemail@exemplo.com</a>
-    </div>
-  </aside>
+function closeSidebar() {
+  if (!sidebar) return;
+  sidebar.classList.remove('open');
+  if (backdrop) backdrop.setAttribute('hidden', '');
+  if (sbToggle) sbToggle.setAttribute('aria-expanded', 'false');
+}
+if (sbToggle && sidebar) {
+  sbToggle.addEventListener('click', () => {
+    const open = sidebar.classList.toggle('open');
+    sbToggle.setAttribute('aria-expanded', String(open));
+    if (backdrop) { if (open) backdrop.removeAttribute('hidden'); else backdrop.setAttribute('hidden', ''); }
+  });
+}
+if (backdrop) backdrop.addEventListener('click', closeSidebar);
+document.querySelectorAll('.sb-nav a, .sb-cta').forEach(a => a.addEventListener('click', closeSidebar));
 
-  <div class="main">
-    <main id="main-content">
+// ── Link ativo conforme a seção visível ─────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navAs    = document.querySelectorAll('.sb-nav a[href*="#"]');
+if (sections.length && navAs.length) {
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAs.forEach(a => {
+          const href = a.getAttribute('href') || '';
+          a.classList.toggle('active', href.endsWith('#' + e.target.id));
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(s => sectionObserver.observe(s));
+}
 
-      <section class="projetos-header">
-        <div class="wrap">
-          <span class="eyebrow">Projetos</span>
-          <h1>[Um retrato do nosso trabalho]</h1>
-          <p class="lede" style="max-width:60ch;">[1-2 frases sobre os projetos abaixo. Estão agrupados por período — clique em cada bloco para expandir.]</p>
-        </div>
-      </section>
+// ── Revelar ao rolar ────────────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-      <section class="projetos-list">
-        <div class="wrap">
-          <!-- Duplique um .semester-block para cada período e um .project-entry para cada projeto. -->
-          <div class="semester-block">
-            <div class="semester-heading">[2026 — 1º Semestre]</div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio do cliente e o que foi feito, em 1-2 frases. Evite dados confidenciais sem autorização.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado — de preferência com um número concreto, ex: redução de 30% no tempo de análise.]</p></div>
-            </div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio e o que foi feito.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado alcançado.]</p></div>
-            </div>
-          </div>
+// ── Contadores animados ─────────────────────────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  const dur = 1200; let t0 = null;
+  function step(ts) {
+    if (!t0) t0 = ts;
+    const pct = Math.min((ts - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - pct, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (pct < 1) requestAnimationFrame(step); else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(step);
+}
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
-          <div class="semester-block">
-            <div class="semester-heading">[2025 — 2º Semestre]</div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio e o que foi feito.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado alcançado.]</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
+// ── Blocos colapsáveis (projetos.html) ──────────────────────────────────────
+document.querySelectorAll('.semester-block').forEach(block => {
+  const heading = block.querySelector('.semester-heading');
+  if (!heading) return;
+  const body = document.createElement('div');
+  body.className = 'semester-body';
+  while (heading.nextSibling) body.appendChild(heading.nextSibling);
+  block.appendChild(body);
+  const btn = document.createElement('button');
+  btn.className = 'semester-toggle';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = `<span>${heading.innerHTML}</span>
+    <svg class="semester-chevron" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  heading.replaceWith(btn);
+  block.classList.add('collapsed');
+  btn.addEventListener('click', () => {
+    const collapsed = block.classList.toggle('collapsed');
+    btn.setAttribute('aria-expanded', String(!collapsed));
+  });
+});
 
-      <footer class="site-footer">
-        <div class="wrap footer-row">
-          <span>© <span id="ano"></span> [Nome da Consultoria] · Todos os direitos reservados</span>
-          <span><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a> · [Cidade, Estado]</span>
-        </div>
-      </footer>
+// ── Rodízio dos ícones estatísticos no hero ─────────────────────────────────
+const glyphs = document.querySelectorAll('.hero-glyphs .glyph');
+if (glyphs.length > 1) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    let gi = 0;
+    setInterval(() => {
+      glyphs[gi].classList.remove('is-active');
+      gi = (gi + 1) % glyphs.length;
+      glyphs[gi].classList.add('is-active');
+    }, 2500);
+  }
+}
 
-    </main>
-  </div>
-
-  <script src="main.js"></script>
-</body>
-</html>
+// ── Ano automático no rodapé ────────────────────────────────────────────────
+document.querySelectorAll('#ano').forEach(el => { el.textContent = new Date().getFullYear(); });
