@@ -81,7 +81,7 @@ p { margin:0 0 1em; color:var(--muted); }
 .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; padding-top:72px; }
 .hero-inner { flex:1; display:flex; flex-direction:column; justify-content:center; padding-top:40px; padding-bottom:40px; }
 .hero-top { margin-bottom:28px; }
-.hero-title { font-family:var(--font-display); font-weight:700; font-size:clamp(2.9rem,7vw,6.2rem); line-height:.98; letter-spacing:-0.04em; margin:0 0 48px; max-width:16ch; }
+.hero-title { font-family:var(--font-display); font-weight:700; font-size:clamp(2.6rem, 6vw, 5.2rem); line-height:.98; letter-spacing:-0.04em; margin:0 0 48px; max-width:16ch; }
 .hero-row { display:grid; grid-template-columns:1.5fr .5fr; gap:40px; align-items:center; }
 .hero-lede { font-size:1.24rem; color:var(--ink); max-width:46ch; line-height:1.5; }
 .hero-actions { display:flex; gap:14px; margin-top:28px; flex-wrap:wrap; }
