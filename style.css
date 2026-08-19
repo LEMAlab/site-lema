@@ -230,6 +230,9 @@ p { margin:0 0 1em; color:var(--muted); }
 .contato p { color:#C7CFDA; }
 .contato .eyebrow { background:rgba(224,122,76,.16); color:var(--accent-lt); border-color:rgba(224,122,76,.4); }
 .contato-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+.contato-mail { font-family:var(--font-display); font-weight:500; font-size:clamp(1.2rem,2.2vw,1.55rem); color:var(--paper); margin:10px 0 0; letter-spacing:-0.01em; }
+.contato-mail a { color:var(--accent-lt); text-decoration:underline; text-underline-offset:4px; text-decoration-thickness:1.5px; }
+.contato-mail a:hover { color:var(--white); }
 .contato .btn-outline { color:var(--paper); border-color:rgba(255,255,255,.28); }
 .contato .btn-outline:hover { background:var(--paper); color:var(--ink); border-color:var(--paper); }
 .contato-detail { border-left:1px solid rgba(255,255,255,.16); padding-left:40px; }
