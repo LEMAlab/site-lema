@@ -100,6 +100,7 @@ p { margin:0 0 1em; color:var(--muted); }
 .hero-glyphs { justify-self:end; position:relative; width:clamp(120px,15vw,180px); aspect-ratio:1; color:var(--ink); }
 .hero-glyphs .glyph { position:absolute; inset:0; width:100%; height:100%; opacity:0; transform:scale(.85) rotate(-6deg); transition:opacity .55s var(--ease), transform .55s var(--ease); }
 .hero-glyphs .glyph.is-active { opacity:1; transform:none; }
+.hero { border-bottom:1px solid rgba(16,58,99,.12); }
 .stat-bar { border-top:1px solid rgba(16,58,99,.12); }
 .stat-bar-inner { display:grid; grid-template-columns:repeat(3,1fr); }
 .stat { padding:26px 26px 30px; text-align:center; }
