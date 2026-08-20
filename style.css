@@ -278,3 +278,10 @@ footer.site-footer { background:var(--ink-2); color:#8EA0B4; padding:30px 0; fon
 .project-result { margin-top:14px; padding:14px 18px; background:rgba(166,216,42,.08); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; }
 .result-label { font-family:var(--font-mono); font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-deep); display:block; margin-bottom:4px; }
 .project-result p { margin:0; color:var(--ink); font-size:.95rem; }
+
+/* ── Faixa institucional (topo do conteúdo) ─────────────── */
+.topbar { padding:16px 0; border-bottom:1px solid rgba(16,58,99,.10); background:var(--paper); }
+.topbar-inner { display:flex; align-items:center; gap:14px; }
+.topbar-mark { width:5px; align-self:stretch; min-height:40px; border-radius:3px; background:var(--grad-accent); }
+.topbar-title { font-family:var(--font-display); font-weight:700; font-size:clamp(1rem,1.5vw,1.22rem); color:var(--ink); margin:0; letter-spacing:-0.01em; line-height:1.2; }
+.topbar-sub { font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin:5px 0 0; }
