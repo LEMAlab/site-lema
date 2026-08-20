@@ -280,8 +280,12 @@ footer.site-footer { background:var(--ink-2); color:#8EA0B4; padding:30px 0; fon
 .project-result p { margin:0; color:var(--ink); font-size:.95rem; }
 
 /* ── Faixa institucional (topo do conteúdo) ─────────────── */
-.topbar { padding:16px 0; border-bottom:1px solid rgba(16,58,99,.10); background:var(--paper); }
+.topbar { padding:16px 0; border-bottom:1px solid rgba(16,58,99,.10); background:var(--paper); margin-left:calc(-1 * clamp(8px,2vw,40px)); }
+.topbar .wrap { max-width:none; padding-left:clamp(20px,2.5vw,34px); }
 .topbar-inner { display:flex; align-items:center; gap:14px; }
 .topbar-mark { width:5px; align-self:stretch; min-height:40px; border-radius:3px; background:var(--grad-accent); }
 .topbar-title { font-family:var(--font-display); font-weight:700; font-size:clamp(1rem,1.5vw,1.22rem); color:var(--ink); margin:0; letter-spacing:-0.01em; line-height:1.2; }
 .topbar-sub { font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin:5px 0 0; }
+
+/* Faixa: no mobile a sidebar some, então não recua para a esquerda */
+@media (max-width:980px) { .topbar { margin-left:0; } .topbar .wrap { padding-left:clamp(20px,5vw,28px); } }
