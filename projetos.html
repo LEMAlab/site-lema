@@ -4,11 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos — LEMA</title>
-  <meta name="description" content="[Projetos e estudos de caso da consultoria.]" />
+  <meta name="description" content="Alguns dos últimos projetos do Laboratório de Estatística e Matemática Aplicada (LEMA/UFC)." />
+  <link rel="icon" href="imagens/logo-lema.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=11" />
+  <style>
+    /* Carrossel de projetos (estilos próprios desta página) */
+    .pcarousel-sec { padding:12px 0 90px; }
+    .pcarousel { position:relative; margin-top:8px; }
+    .pcard { display:none; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--sh-sm); padding:clamp(28px,4vw,44px); }
+    .pcard.is-active { display:block; animation:pfade .4s var(--ease); }
+    @keyframes pfade { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+    .pcard-tag { display:inline-flex; align-items:center; gap:8px; background:rgba(166,216,42,.12); color:var(--accent-deep); border:1px solid rgba(166,216,42,.28); font-family:var(--font-mono); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:4px 12px; border-radius:var(--pill); }
+    .pcard-title { font-family:var(--font-display); font-weight:700; font-size:clamp(1.4rem,2.4vw,2rem); color:var(--ink); margin:16px 0 8px; letter-spacing:-0.01em; }
+    .pcard-fields { margin:14px 0 0; }
+    .pcard-fields > div { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:18px 0; border-top:1px solid var(--line); }
+    .pcard-fields dt { font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-deep); margin:0; padding-top:2px; }
+    .pcard-fields dd { margin:0; color:var(--ink); line-height:1.55; }
+    .pdots { display:flex; gap:12px; justify-content:center; margin-top:28px; }
+    .pdot { width:12px; height:12px; border-radius:50%; border:1.5px solid var(--accent-deep); background:transparent; cursor:pointer; padding:0; transition:transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease); }
+    .pdot:hover { border-color:var(--accent); }
+    .pdot.is-active { background:var(--accent); border-color:var(--accent); transform:scale(1.2); }
+    .pdot:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+    @media (max-width:640px){ .pcard-fields > div { grid-template-columns:1fr; gap:6px; } }
+  </style>
 </head>
 <body>
 
@@ -37,7 +58,6 @@
     </nav>
     <div class="sb-foot">
       <span class="sb-status"><span class="dot" aria-hidden="true"></span> Aberto a novos projetos</span>
-      <a href="index.html#contato" class="btn btn-primary btn-sm sb-cta">Falar com a gente</a>
       <a href="mailto:lema@ufc.br" class="sb-email">lema@ufc.br</a>
     </div>
   </aside>
@@ -45,41 +65,80 @@
   <div class="main">
     <main id="main-content">
 
+      <!-- FAIXA INSTITUCIONAL -->
+      <div class="topbar">
+        <div class="wrap topbar-inner">
+          <span class="topbar-mark" aria-hidden="true"></span>
+          <div>
+            <p class="topbar-title">Laboratório de Estatística e Matemática Aplicada</p>
+            <p class="topbar-sub">Universidade Federal do Ceará</p>
+          </div>
+        </div>
+      </div>
+
       <section class="projetos-header">
         <div class="wrap">
           <span class="eyebrow">Projetos</span>
-          <h1>[Um retrato do nosso trabalho]</h1>
-          <p class="lede" style="max-width:60ch;">[1-2 frases sobre os projetos abaixo. Estão agrupados por período — clique em cada bloco para expandir.]</p>
+          <h1>Alguns dos nossos últimos projetos</h1>
         </div>
       </section>
 
-      <section class="projetos-list">
+      <section class="pcarousel-sec">
         <div class="wrap">
-          <!-- Duplique um .semester-block para cada período e um .project-entry para cada projeto. -->
-          <div class="semester-block">
-            <div class="semester-heading">[2026 — 1º Semestre]</div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio do cliente e o que foi feito, em 1-2 frases. Evite dados confidenciais sem autorização.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado — de preferência com um número concreto, ex: redução de 30% no tempo de análise.]</p></div>
-            </div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio e o que foi feito.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado alcançado.]</p></div>
-            </div>
+          <div class="pcarousel">
+            <!-- Projeto 1 -->
+            <article class="pcard is-active">
+              <span class="pcard-tag">Projeto 01</span>
+              <h2 class="pcard-title">[Título do projeto]</h2>
+              <dl class="pcard-fields">
+                <div><dt>Equipe técnica</dt><dd>[Alunos: Nome Sobrenome, Nome Sobrenome · Supervisão: Prof.(a) Nome Sobrenome]</dd></div>
+                <div><dt>Unidade solicitante</dt><dd>[Ex: Secretaria Municipal de Saúde de Fortaleza]</dd></div>
+              </dl>
+            </article>
+            <!-- Projeto 2 -->
+            <article class="pcard">
+              <span class="pcard-tag">Projeto 02</span>
+              <h2 class="pcard-title">[Título do projeto]</h2>
+              <dl class="pcard-fields">
+                <div><dt>Equipe técnica</dt><dd>[Alunos: ... · Supervisão: Prof.(a) ...]</dd></div>
+                <div><dt>Unidade solicitante</dt><dd>[Ex: Hospital Universitário Walter Cantídio]</dd></div>
+              </dl>
+            </article>
+            <!-- Projeto 3 -->
+            <article class="pcard">
+              <span class="pcard-tag">Projeto 03</span>
+              <h2 class="pcard-title">[Título do projeto]</h2>
+              <dl class="pcard-fields">
+                <div><dt>Equipe técnica</dt><dd>[Alunos: ... · Supervisão: Prof.(a) ...]</dd></div>
+                <div><dt>Unidade solicitante</dt><dd>[Ex: Centro de Ciências / UFC]</dd></div>
+              </dl>
+            </article>
+            <!-- Projeto 4 -->
+            <article class="pcard">
+              <span class="pcard-tag">Projeto 04</span>
+              <h2 class="pcard-title">[Título do projeto]</h2>
+              <dl class="pcard-fields">
+                <div><dt>Equipe técnica</dt><dd>[Alunos: ... · Supervisão: Prof.(a) ...]</dd></div>
+                <div><dt>Unidade solicitante</dt><dd>[Ex: Secretaria da Educação do Estado do Ceará]</dd></div>
+              </dl>
+            </article>
+            <!-- Projeto 5 (exemplo com empresa) -->
+            <article class="pcard">
+              <span class="pcard-tag">Projeto 05</span>
+              <h2 class="pcard-title">[Título do projeto]</h2>
+              <dl class="pcard-fields">
+                <div><dt>Equipe técnica</dt><dd>[Alunos: ... · Supervisão: Prof.(a) ...]</dd></div>
+                <div><dt>Unidade solicitante</dt><dd>Empresa privada</dd></div>
+              </dl>
+            </article>
           </div>
 
-          <div class="semester-block">
-            <div class="semester-heading">[2025 — 2º Semestre]</div>
-            <div class="project-entry">
-              <span class="project-tag">[Setor / área]</span>
-              <h4>[Nome do projeto ou cliente]</h4>
-              <p>[O desafio e o que foi feito.]</p>
-              <div class="project-result"><span class="result-label">Resultado</span><p>[O resultado alcançado.]</p></div>
-            </div>
+          <div class="pdots" role="tablist" aria-label="Selecionar projeto">
+            <button class="pdot is-active" role="tab" aria-selected="true" aria-label="Projeto 1"></button>
+            <button class="pdot" role="tab" aria-selected="false" aria-label="Projeto 2"></button>
+            <button class="pdot" role="tab" aria-selected="false" aria-label="Projeto 3"></button>
+            <button class="pdot" role="tab" aria-selected="false" aria-label="Projeto 4"></button>
+            <button class="pdot" role="tab" aria-selected="false" aria-label="Projeto 5"></button>
           </div>
         </div>
       </section>
@@ -95,5 +154,24 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    (function(){
+      var cards=[].slice.call(document.querySelectorAll('.pcard'));
+      var dots=[].slice.call(document.querySelectorAll('.pdot'));
+      if(!cards.length) return;
+      var i=0, timer=null;
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function show(n){
+        i=(n+cards.length)%cards.length;
+        cards.forEach(function(c,k){ c.classList.toggle('is-active', k===i); });
+        dots.forEach(function(d,k){ d.classList.toggle('is-active', k===i); d.setAttribute('aria-selected', k===i?'true':'false'); });
+      }
+      function restart(){ if(reduce) return; clearInterval(timer); timer=setInterval(function(){ show(i+1); }, 6000); }
+      dots.forEach(function(d,k){ d.addEventListener('click', function(){ show(k); restart(); }); });
+      var sec=document.querySelector('.pcarousel-sec');
+      if(sec){ sec.addEventListener('mouseenter', function(){ clearInterval(timer); }); sec.addEventListener('mouseleave', restart); }
+      show(0); restart();
+    })();
+  </script>
 </body>
 </html>
