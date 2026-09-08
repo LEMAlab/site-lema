@@ -196,7 +196,7 @@ p { margin:0 0 1em; color:var(--muted); }
 .topics-card::before { content:""; position:absolute; inset:0; background:radial-gradient(700px 340px at 90% -20%, rgba(166,216,42,.2), transparent 60%); pointer-events:none; }
 .topics-card > * { position:relative; z-index:1; }
 .topics-card .eyebrow { background:rgba(166,216,42,.18); color:var(--accent-lt); border-color:rgba(166,216,42,.4); }
-.topics-title { font-size:clamp(1.8rem,3.2vw,2.5rem); color:var(--white); margin:22px 0 32px; letter-spacing:-0.02em; }
+.topics-carousel { margin-top: 28px; }
 
 .topics-carousel { min-height:220px; display:flex; flex-direction:column; }
 .topics-slide { display:none; animation:topics-fade .4s var(--ease); }
