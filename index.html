@@ -208,14 +208,68 @@
         </div>
       </section>
 
-      <!-- DEPOIMENTO -->
-      <section class="quote-section">
+      <!-- ÁREAS DE ATUAÇÃO -->
+      <section class="topics-section">
         <div class="wrap">
-          <div class="quote-card reveal">
-            <span class="eyebrow">Depoimento</span>
-            <span class="quote-mark" aria-hidden="true">"</span>
-            <blockquote class="quote-text">[Depoimento de uma instituição ou parceiro atendido pelo LEMA — curto e sobre um resultado concreto.]</blockquote>
-            <div class="quote-cite"><span class="quote-name">[Nome]</span><span class="quote-role">[Cargo · Instituição]</span></div>
+          <div class="topics-card reveal">
+            <span class="eyebrow">Áreas de atuação</span>
+            <h2 class="topics-title">Um pouco sobre o que fazemos</h2>
+
+            <div class="topics-carousel" data-carousel>
+
+              <div class="topics-slide is-active" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="M20 20l-5.5-5.5"/></svg></span>
+                <h3>Análise Exploratória</h3>
+                <p>Investigação inicial dos dados por meio de estatísticas descritivas e visualizações, em busca de padrões, valores atípicos e relações entre variáveis. É a primeira etapa de praticamente todo projeto de dados, da pesquisa acadêmica a relatórios empresariais.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="1.5"/><circle cx="11" cy="10" r="1.5"/><circle cx="16" cy="13" r="1.5"/><circle cx="19" cy="6" r="1.5"/><path d="M4 19 L20 5"/></svg></span>
+                <h3>Análise de Regressão</h3>
+                <p>Modela a relação entre uma variável de interesse e um ou mais fatores explicativos, estimando como mudanças nesses fatores afetam o resultado. Usada em estudos de causa-efeito, previsão de preços, avaliação de políticas públicas e pesquisas científicas.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5 H9 V11 H14 V16 H21"/></svg></span>
+                <h3>Análise de Sobrevivência</h3>
+                <p>Técnicas para modelar o tempo até a ocorrência de um evento — como falha, óbito ou cancelamento —, lidando adequadamente com dados incompletos (censurados). Muito usada em estudos clínicos, engenharia de confiabilidade e análise de cancelamento de clientes.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 L3 6 M9 18 L9 4 M15 18 L15 8 M21 18 L21 5"/></svg></span>
+                <h3>Análise Longitudinal</h3>
+                <p>Estudo de dados coletados repetidamente ao longo do tempo sobre os mesmos indivíduos ou unidades, capturando mudanças e tendências individuais. Comum em estudos de coorte, acompanhamento de pacientes e pesquisas educacionais.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6"/></svg></span>
+                <h3>Tarefas preditivas de machine learning</h3>
+                <p>Construção de modelos que aprendem padrões em dados históricos para prever resultados futuros ou classificar novas observações. Aplicada em previsão de demanda, detecção de fraude, diagnóstico assistido e sistemas de recomendação.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 Q6 4 9 12 T16 12 T22 12"/></svg></span>
+                <h3>Séries temporais</h3>
+                <p>Análise de dados ordenados no tempo, identificando tendências, sazonalidade e dependências entre observações passadas e futuras. Usada em previsão de vendas, demanda energética, indicadores econômicos e climáticos.</p>
+              </div>
+
+              <div class="topics-slide" data-slide>
+                <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="4" height="16"/><rect x="10" y="8" width="4" height="12"/><rect x="16" y="2" width="4" height="18"/></svg></span>
+                <h3>Análise de Variância</h3>
+                <p>Teste estatístico (ANOVA) que compara médias entre três ou mais grupos para verificar se as diferenças observadas são estatisticamente significativas. Aplicada em experimentos controlados, ensaios agrícolas e industriais, e comparações entre tratamentos.</p>
+              </div>
+
+              <div class="topics-dots" role="tablist" aria-label="Selecionar tópico">
+                <button class="topics-dot is-active" data-dot aria-label="Análise Exploratória" aria-selected="true"></button>
+                <button class="topics-dot" data-dot aria-label="Análise de Regressão" aria-selected="false"></button>
+                <button class="topics-dot" data-dot aria-label="Análise de Sobrevivência" aria-selected="false"></button>
+                <button class="topics-dot" data-dot aria-label="Análise Longitudinal" aria-selected="false"></button>
+                <button class="topics-dot" data-dot aria-label="Tarefas preditivas de machine learning" aria-selected="false"></button>
+                <button class="topics-dot" data-dot aria-label="Séries temporais" aria-selected="false"></button>
+                <button class="topics-dot" data-dot aria-label="Análise de Variância" aria-selected="false"></button>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
