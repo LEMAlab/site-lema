@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipe — LEMA</title>
+  <meta name="description" content="Conheça a equipe do LEMA — Laboratório de Estatística e Matemática Aplicada da UFC." />
+  <link rel="icon" href="imagens/logo-lema.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Barra mobile -->
+  <div class="mobile-bar">
+    <a href="index.html" class="nav-logo"><img src="imagens/logo-lema.png" alt="LEMA" /></a>
+    <button class="sb-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="sb-backdrop" hidden></div>
+
+  <!-- Menu lateral fixo -->
+  <aside class="sidebar">
+    <div class="sb-head">
+      <a href="index.html" class="nav-logo" aria-label="LEMA — início">
+        <img src="imagens/logo-lema-light.png" alt="LEMA — Laboratório de Estatística e Matemática Aplicada" />
+      </a>
+    </div>
+    <nav class="sb-nav" aria-label="Navegação principal">
+      <a href="index.html#sobre"><span class="sb-idx">01</span> Sobre</a>
+      <a href="index.html#servicos"><span class="sb-idx">02</span> Serviços</a>
+      <a href="index.html#desafios"><span class="sb-idx">03</span> Desafios</a>
+      <a href="index.html#processo"><span class="sb-idx">04</span> Como trabalhamos</a>
+      <a href="equipe.html" class="active"><span class="sb-idx">05</span> Equipe</a>
+      <a href="projetos.html"><span class="sb-idx">06</span> Projetos</a>
+      <a href="index.html#faq"><span class="sb-idx">07</span> FAQ</a>
+    </nav>
+    <div class="sb-foot">
+      <span class="sb-status"><span class="dot" aria-hidden="true"></span> Aberto a novos projetos</span>
+      <a href="mailto:lema@ufc.br" class="sb-email">lema@ufc.br</a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <main id="main-content">
+
+      <!-- FAIXA INSTITUCIONAL -->
+      <div class="topbar">
+        <div class="wrap topbar-inner">
+          <span class="topbar-mark" aria-hidden="true"></span>
+          <div>
+            <p class="topbar-title">Laboratório de Estatística e Matemática Aplicada</p>
+            <p class="topbar-sub">Universidade Federal do Ceará</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="projetos-header" style="border-top:none;">
+        <div class="wrap">
+          <span class="eyebrow">Equipe</span>
+          <h1>Quem vai trabalhar com você</h1>
+          <p style="max-width:60ch;">Conheça a equipe do LEMA e acesse o currículo Lattes de cada membro.</p>
+        </div>
+      </section>
+
+      <section style="border-top:none; padding-top:0;">
+        <div class="wrap">
+          <div class="grid-team">
+            <div class="team-card">
+              <img class="avatar" src="imagens/silvia-foto.webp" alt="Profa. Dra. Silvia Maria de Freitas" />
+              <h3>Profa. Dra. Silvia Maria de Freitas</h3>
+              <span class="team-role">Coordenadora</span>
+              <a class="team-lattes" href="[COLE AQUI O LINK DO LATTES]" target="_blank" rel="noopener">Currículo Lattes ↗</a>
+            </div>
+            <div class="team-card">
+              <img class="avatar" src="imagens/jeny-foto.webp" alt="Profa. Dra. Jeniffer Johana Duarte Sanchez" />
+              <h3>Profa. Dra. Jeniffer Johana Duarte Sanchez</h3>
+              <span class="team-role">Vice-coordenadora</span>
+              <a class="team-lattes" href="[COLE AQUI O LINK DO LATTES]" target="_blank" rel="noopener">Currículo Lattes ↗</a>
+            </div>
+            <div class="team-card">
+              <img class="avatar" src="imagens/lucas-foto.webp" alt="Lucas Pereira do Amaral" />
+              <h3>Lucas Pereira do Amaral</h3>
+              <span class="team-role">Estatístico</span>
+              <a class="team-lattes" href="[COLE AQUI O LINK DO LATTES]" target="_blank" rel="noopener">Currículo Lattes ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="wrap footer-row">
+          <span>© <span id="ano"></span> LEMA · Laboratório de Estatística e Matemática Aplicada · UFC</span>
+          <span><a href="mailto:lema@ufc.br">lema@ufc.br</a> · Fortaleza, Ceará</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
