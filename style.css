@@ -241,6 +241,11 @@ p { margin:0 0 1em; color:var(--muted); }
   width:76px; height:76px; border-radius:50%; object-fit:cover; flex-shrink:0;
   box-shadow:0 0 0 3px var(--paper), 0 0 0 4px var(--line);
 }
+.team-list-photo.placeholder {
+  display:flex; align-items:center; justify-content:center;
+  background:var(--grad-navy); color:var(--accent-lt);
+  font-family:var(--font-mono); font-weight:700; font-size:1.05rem; letter-spacing:.02em;
+}
 .team-list-body { flex:1; min-width:0; }
 .team-list-body h3 { font-size:1.08rem; margin:0 0 4px; }
 .team-list-dept {
@@ -248,12 +253,18 @@ p { margin:0 0 1em; color:var(--muted); }
   text-transform:uppercase; letter-spacing:.04em; margin-bottom:10px;
 }
 .team-list-lattes {
-  display:inline-flex; align-items:center; gap:6px;
+  display:inline-flex; align-items:center; gap:7px;
   font-family:var(--font-mono); font-size:.76rem; font-weight:700;
   color:var(--accent-deep); text-decoration:none; text-underline-offset:3px;
 }
-.team-list-lattes svg { width:14px; height:14px; flex-shrink:0; }
+.lattes-badge {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:18px; height:18px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color:var(--white); font-family:var(--font-display); font-weight:700; font-size:.64rem;
+}
 .team-list-lattes:hover { color:var(--ink); text-decoration:underline; }
+.team-list-lattes:hover .lattes-badge { box-shadow:0 0 0 3px rgba(166,216,42,.2); }
 
 @media (max-width:560px) {
   .team-list-card { flex-direction:column; align-items:flex-start; text-align:left; }
